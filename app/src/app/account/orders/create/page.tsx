@@ -74,7 +74,6 @@ export default function Home() {
 
     const handleChangeProduct = (isChecked: string, id: number) => {
         products.find(product => product.id === id)!.isChecked = (isChecked === undefined) ? true : !isChecked
-        console.log(products)
         getTotal()
     }
 
@@ -89,7 +88,6 @@ export default function Home() {
                 totalAmount: totalOrder
             })
                 .then(data => {
-                    console.log(data)
                     router.push('/account/dashboard')
                     setLoading(false)
                 })

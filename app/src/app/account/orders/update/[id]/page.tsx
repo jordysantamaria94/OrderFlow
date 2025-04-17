@@ -110,7 +110,6 @@ export default function Home() {
                 totalAmount: totalOrder
             })
                 .then(data => {
-                    console.log(data)
                     router.push('/account/dashboard')
                     setLoading(false)
                 })
